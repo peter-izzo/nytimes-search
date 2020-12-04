@@ -6,5 +6,10 @@ $.ajax({
 url: url,
 method: "GET"
 }).then(function(resp) {
-    console.log(JSON.stringify(resp));
+    console.log(JSON.stringify(resp.response.docs, null, 2));
+})
+
+//clears all forms
+$("#clear").on("click", function () {
+    $(".form-control").val('');
 })
